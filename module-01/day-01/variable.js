@@ -1,11 +1,10 @@
-const readline = require("readline");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+console.log(true*true);
+console.log(true*false);
+console.log(false*true);
+console.log(false*false);
 
-rl.question("What is your name? ", (answer) => {
-  console.log(`Hello, ${answer}!`);
-  rl.close();
-});
+console.log(true+true);
+console.log(true+false);
+console.log(false+true);
+console.log(false+false);
