@@ -5,8 +5,8 @@ for (let i = 1; i <= nLim; i++) {
   console.log(`${nInp} x ${i} = ${nInp * i}`);
 }
 
-let sPal = "madam";
-let sRev = sPal.split("").reverse().join("");
+let sPal = 'madam';
+let sRev = sPal.split('').reverse().join('');
 
 if (sPal == sRev) {
   console.log(`${sPal} adalah palindrom`);
@@ -26,13 +26,13 @@ function fxCurFrmt(number) {
   let nNum = Math.floor(number);
   let nDec = Math.round((number - nNum) * 100);
 
-  return `Rp${nNum.toLocaleString("id-ID")},${nDec.toString().padStart(2, 0)}`;
+  return `Rp${nNum.toLocaleString('id-ID')},${nDec.toString().padStart(2, 0)}`;
 }
 
 console.log(fxCurFrmt(nCur));
 
-let sOrg = "Hello World Hello";
-let sOrgSrch = "Hello";
-let sOrgRmv = sOrg.split(sOrgSrch).join("").trim();
+let sOrg = 'Hello World Hello';
+let sOrgSrch = 'Hello';
+let sOrgRmv = sOrg.split(sOrgSrch).join('').trim();
 
 console.log(`${sOrg} -> ${sOrgRmv}`);
