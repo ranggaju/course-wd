@@ -1,17 +1,34 @@
-// 01. persegi panjang
+console.log('------------------------------');
+console.log('                              ');
+console.log('       Exercise Day 01        ');
+console.log('                              ');
+console.log('------------------------------');
 
-let rectLen = 5;
-let rectWid = 3;
+// Write a code to find area of rectangle
 
-const rectArea = rectLen * rectWid;
-const rectPerim = 2 * (rectLen + rectWid);
+let rectALen = 5;
+let rectAWid = 3;
 
-console.log('Panjang persegi panjang: ' + rectLen + ' unit');
-console.log('Lebar persegi panjang: ' + rectWid + ' unit');
-console.log('Keliling persegi panjang: ' + rectPerim + ' unit');
-console.log('Luas persegi panjang: ' + rectArea + ' unit persegi');
+const rectArea = rectALen * rectAWid;
 
-// 02. lingkaran
+console.log('rectangle a length   : ' + rectALen + ' unit');
+console.log('rectangle a width    : ' + rectAWid + ' unit');
+console.log('rectangle a area     : ' + rectArea + ' square unit');
+console.log('------------------------------');
+
+// Write a code to find perimeter of rectangle
+
+let rectBLen = 5;
+let rectBWid = 3;
+
+const rectBPerim = 2 * (rectBLen + rectBWid);
+
+console.log('rectangle b length   : ' + rectBLen + ' unit');
+console.log('rectangle b width    : ' + rectBWid + ' unit');
+console.log('rectangle b perimeter: ' + rectBPerim + ' unit');
+console.log('------------------------------');
+
+// Write a code to find diameter, circumference and area of a circle
 
 let cirRad = 5;
 
@@ -19,23 +36,25 @@ const diCir = 2 * cirRad;
 const cirCirc = parseFloat((2 * Math.PI * cirRad).toFixed(4));
 const cirArea = parseFloat(Math.trunc(Math.PI * cirRad ** 2 * 1000) / 1000);
 
-console.log('Jari-jari lingkaran: ' + cirRad + ' unit');
-console.log('Diameter lingkaran: ' + diCir + ' unit');
-console.log('Keliling lingkaran: ' + cirCirc + ' unit');
-console.log('Luas lingkaran: ' + cirArea + ' unit persegi');
+console.log('circle radius        : ' + cirRad + ' unit');
+console.log('circle diameter      : ' + diCir + ' unit');
+console.log('circle circumference : ' + cirCirc + ' unit');
+console.log('circle area          : ' + cirArea + ' unit persegi');
+console.log('------------------------------');
 
-// 03. segitiga
+// Write a code to find angles of triangle if two angles are given
 
 let trglAngA = 80;
 let trglAngB = 65;
 
 const trglAngC = 180 - (trglAngA + trglAngB);
 
-console.log('Sudut A segitiga: ' + trglAngA + ' derajat');
-console.log('Sudut B segitiga: ' + trglAngB + ' derajat');
-console.log('Sudut C segitiga: ' + trglAngC + ' derajat');
+console.log('triangle angle a     : ' + trglAngA + ' degree');
+console.log('triangle angle b     : ' + trglAngB + ' degree');
+console.log('triangle angle c     : ' + trglAngC + ' degree');
+console.log('------------------------------');
 
-// 04. days
+// Write a code to convert days to years, months and days (Notes: 1 year : 365 days, 1 month : 30 days)
 
 let daysNum = 400;
 
@@ -45,22 +64,24 @@ const dayNum = (daysNum % 365) % 30;
 
 console.log(
   daysNum +
-    ' hari -> ' +
+    ' day/s            : ' +
     yrNum +
-    ' tahun, ' +
+    ' year/s, ' +
     moNum +
-    ' bulan, ' +
+    ' month/s, ' +
     dayNum +
-    ' hari'
+    ' day/s'
 );
+console.log('------------------------------');
 
-// 05. dates
+// Write a code to get difference between dates in days
 
 let dateA = new Date('2022-01-20');
 let dateB = new Date('2022-01-22');
 
 const dayDif = Math.abs(dateA - dateB) / (1000 * 60 * 60 * 24);
 
-console.log('Tanggal A: ' + dateA);
-console.log('Tanggal B: ' + dateB);
-console.log('Jumlah hari antara tanggal: ' + dayDif + ' hari');
+console.log('Date A               : ' + dateA);
+console.log('Date B               : ' + dateB);
+console.log('Difference           : ' + dayDif + ' day/s');
+console.log('------------------------------');

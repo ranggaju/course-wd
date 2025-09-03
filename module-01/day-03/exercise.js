@@ -1,126 +1,168 @@
-let nInp = 9;
-let nLim = 10;
+console.log('------------------------------');
+console.log('                              ');
+console.log('       Exercise Day 03        ');
+console.log('                              ');
+console.log('------------------------------');
 
-for (let i = 1; i <= nLim; i++) {
-  console.log(`${nInp} x ${i} = ${nInp * i}`);
+// Write a code to display the multiplication table of a given integer
+
+let numA = 9;
+let numLim = 10;
+let numLen = numLim.toString().length;
+let numMulLen = (numA * numLim).toString().length;
+
+for (let i = 1; i <= numLim; i++) {
+  let strMul = i.toString().padStart(numLen, ' ');
+  let strRes = (numA * i).toString().padStart(numMulLen, ' ');
+  console.log(`${numA} x ${strMul} = ${strRes}`);
+}
+console.log('------------------------------');
+
+// Write a code to check whether a string is a palindrome or not
+
+let strA = 'madam';
+let strARev = strA.split('').reverse().join('');
+
+strA == strARev
+  ? console.log(`${strA} is a palindrome`)
+  : console.log(`${strA} is not a palindrom`);
+console.log('------------------------------');
+
+// Write a code to convert centimeter to kilometer
+
+let numUnt = 100000.2;
+
+const nKilo = Math.round((numUnt / 100000) * 100) / 100;
+
+console.log(`${numUnt} cm = ${nKilo} km`);
+console.log('------------------------------');
+
+// Write a code to format number as currency (IDR)
+
+let numCur = 123456.002;
+
+function curFrmt(number) {
+  let num = Math.floor(number);
+  let dcm = Math.round((number - num) * 100);
+
+  return `Rp${num.toLocaleString('id-ID')},${dcm.toString().padStart(2, 0)}`;
 }
 
-let sPal = 'madam';
-let sRev = sPal.split('').reverse().join('');
+console.log(curFrmt(numCur));
+console.log('------------------------------');
 
-if (sPal == sRev) {
-  console.log(`${sPal} adalah palindrom`);
-} else {
-  console.log(`${sPal} bukan palindrom`);
+// Write a code to remove the first occurrence of a given “search string” from a string
+
+let strB = 'Hello world, hello universe';
+let strBSrch = 'ell';
+
+function rmvFrst(string, search) {
+  string.indexOf(search) != -1
+    ? (string =
+        string.slice(0, string.indexOf(search)) +
+        string.slice(string.indexOf(search) + search.length))
+    : (string = string);
+  return string;
 }
 
-let nUnit = 100000;
+console.log(rmvFrst(strB, strBSrch));
+console.log('------------------------------');
 
-const nKilo = Math.floor(nUnit / 1000);
+// Write a code to capitalize the first letter of each word in a string
 
-console.log(`${nUnit} cm = ${nKilo} km`);
+let strC = 'hello world, hello universe';
 
-let nCur = 123456.002;
-
-function fxCurFrmt(number) {
-  let nNum = Math.floor(number);
-  let nDec = Math.round((number - nNum) * 100);
-
-  return `Rp${nNum.toLocaleString('id-ID')},${nDec.toString().padStart(2, 0)}`;
-}
-
-console.log(fxCurFrmt(nCur));
-
-let sOrg = 'Hello world, hello universe';
-let sOrgSrch = 'hello';
-
-function fxRmvFrst(sStc, sSrch) {
-  let nIdx = sStc.indexOf(sSrch);
-  if (nIdx != -1) {
-    return sStc.slice(0, nIdx) + sStc.slice(nIdx + sSrch.length).trim();
+function cptlFrst(string) {
+  let arrStc = string.split(' ');
+  for (let i = 0; i < arrStc.length; i++) {
+    arrStc[i] = arrStc[i].charAt(0).toUpperCase() + arrStc[i].slice(1);
   }
-  return sStc.trim();
+  return arrStc.join(' ');
 }
 
-console.log(fxRmvFrst(sOrg, sOrgSrch));
+console.log(cptlFrst(strC));
+console.log('------------------------------');
 
-function fxKplFrst(sStc) {
-  let aStc = sStc.split(' ');
-  for (let i = 0; i < aStc.length; i++) {
-    aStc[i] = aStc[i].charAt(0).toUpperCase() + aStc[i].slice(1);
+// Write a code to swap the case of each character from string
+
+let strD = 'The QuiCk BrOwN Fox';
+
+function swpCs(string) {
+  let swap = '';
+  for (let i = 0; i < string.length; i++) {
+    let char = string.charAt(i);
+    char == char.toUpperCase()
+      ? (swap += char.toLowerCase())
+      : (swap += char.toUpperCase());
   }
-  return aStc.join(' ');
+  return swap;
 }
 
-console.log(fxKplFrst(sOrg));
+console.log(swpCs(strD));
+console.log('------------------------------');
 
-function fxSwpCs(sStc) {
-  let sSwp = '';
-  for (let i = 0; i < sStc.length; i++) {
-    let sChr = sStc.charAt(i);
-    if (sChr == sChr.toUpperCase()) {
-      sSwp += sChr.toLowerCase();
-    } else {
-      sSwp += sChr.toUpperCase();
-    }
+// Write a code to find the largest of two given integers
+
+let numF = 42;
+let numG = 27;
+let numH = 18;
+
+function max(...array) {
+  let numMax = array[0];
+  for (let i = 1; i < array.length; i++) {
+    array[i] > numMax ? (numMax = array[i]) : (numMax = numMax);
   }
-  return sSwp;
+  return numMax;
 }
 
-console.log(fxSwpCs(sOrg));
+console.log(`the max value is ${max(numF, numG, numH)}`);
+console.log('------------------------------');
 
-let nNumA = 42;
-let nNumB = 27;
-let nNumC = 18;
+// Write a conditional statement to sort three numbers
 
-function fxMaxArr(aNum) {
-  let nMax = aNum[0];
-  for (let i = 1; i < aNum.length; i++) {
-    if (aNum[i] > nMax) {
-      nMax = aNum[i];
-    }
-  }
-  return nMax;
-}
-
-console.log(fxMaxArr([nNumA, nNumB, nNumC]));
-
-function fxSrtArr(aNum) {
-  for (let i = 0; i < aNum.length - 1; i++) {
-    for (let j = i + 1; j < aNum.length; j++) {
-      if (aNum[i] > aNum[j]) {
-        let nTmp = aNum[i];
-        aNum[i] = aNum[j];
-        aNum[j] = nTmp;
+function sortNumbers(...array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] > array[j]) {
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
       }
     }
   }
-  return aNum;
+  return array.join(', ');
 }
 
-console.log(fxSrtArr([nNumA, nNumB, nNumC]));
+console.log(sortNumbers(numF, numG, numH));
+console.log('------------------------------');
 
-let anyInp = 'true';
+// Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type
 
-function fxCekTpe(anyVal) {
-  let nVal = (typeof anyInp == 'string') * 1 + (typeof anyInp == 'number') * 2;
-  nVal += (nVal == 0) * 3;
-  return nVal;
+let valInp = 'true';
+
+function chkTyp(anyVal) {
+  let type = (typeof valInp == 'string') * 1 + (typeof valInp == 'number') * 2;
+  type += (type == 0) * 3;
+  return type;
 }
 
-console.log(fxCekTpe(anyInp));
+console.log(`type: ${chkTyp(valInp)}`);
+console.log('------------------------------');
 
-let sInp = 'An apple a day keeps the doctor away';
-let sHd = 'a';
+// Write a code to change every letter a into * from a string of input
 
-function fxHdnChr(sStc, sHdnChr) {
-  let aStc = sStc.split('');
-  for (let i = 0; i < aStc.length; i++) {
-    if (aStc[i].toLowerCase() == sHdnChr.toLowerCase()) {
-      aStc[i] = '*';
+let strInp = 'An apple a day keeps the doctor away';
+let strHd = 'a';
+
+function hdChr(string, hide) {
+  let arrStc = string.split('');
+  for (let i = 0; i < arrStc.length; i++) {
+    if (arrStc[i].toLowerCase() == hide.toLowerCase()) {
+      arrStc[i] = '*';
     }
   }
-  return aStc.join('');
+  return arrStc.join('');
 }
 
-console.log(fxHdnChr(sInp, sHd));
+console.log(hdChr(strInp, strHd));
+console.log('------------------------------');

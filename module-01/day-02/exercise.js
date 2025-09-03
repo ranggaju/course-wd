@@ -1,47 +1,87 @@
-let nNum = 7;
+console.log('------------------------------');
+console.log('                              ');
+console.log('       Exercise Day 02        ');
+console.log('                              ');
+console.log('------------------------------');
 
-if (nNum % 2 == 0) {
-  console.log('Angka ' + nNum + ' adalah bilangan genap');
+// Write a code to check whether the number is odd or even
+
+let numA = 25;
+
+if (numA % 2 == 0) {
+  console.log('the number ' + numA + ' is an even number');
 } else {
-  console.log('Angka ' + nNum + ' adalah bilangan ganjil');
+  console.log('the number ' + numA + ' is an odd number');
 }
+console.log('------------------------------');
 
-let nPrime = nNum;
-let sPrime;
+// Write a code to check whether the number is prime number or not
 
-for (let i = 2; i < nPrime; i++) {
-  if (nPrime % i == 0) {
-    sPrime = 'komposit';
+let numB = 7;
+let prmChk;
+
+for (let i = 2; i < numB; i++) {
+  if (numB % i == 0) {
+    prmChk = 'composite';
     break;
   }
-  sPrime = 'prima';
+  prmChk = 'prime';
 }
 
-console.log('Angka ' + nPrime + ' adalah bilangan ' + sPrime);
+console.log('the number ' + numB + ' is an ' + prmChk + ' number');
+console.log('------------------------------');
 
-let nNumSig, sNumSig;
-let nNumFac, sNumFac;
-let nNumFibA, nNumFibB, nNumFibC;
+// Write a code to find the sum of the numbers 1 to N
 
-for (let i = 1; i <= nNum; i++) {
+let numC = 5;
+let numSig, strSig;
+
+for (let i = 1; i <= numC; i++) {
   if (i == 1) {
-    nNumSig = i;
-    nNumFac = i;
-    nNumFibA = 0;
-    nNumFibB = 1;
-    sNumSig = i;
-    sNumFac = i;
+    numSig = i;
+    strSig = i;
   } else {
-    nNumSig = nNumSig += i;
-    nNumFac = nNumFac *= i;
-    nNumFibA = nNumFibB;
-    nNumFibB = nNumFibC;
-    sNumSig = sNumSig + ' + ' + i;
-    sNumFac = sNumFac + ' x ' + i;
+    numSig = numSig += i;
+    strSig = strSig + ' + ' + i;
   }
-  nNumFibC = nNumFibA + nNumFibB;
 }
 
-console.log(nNum + 's -> ' + sNumSig + ' = ' + nNumSig);
-console.log(nNum + '! -> ' + sNumFac + ' = ' + nNumFac);
-console.log('Deret Fibionacci ke-' + nNum + ' adalah ' + nNumFibB);
+console.log('Σ' + numC + ' = ' + strSig + ' = ' + numSig);
+console.log('------------------------------');
+
+// Write a code to find factorial of a number
+
+let numD = 6;
+let numFac, strFac;
+
+for (let i = 1; i <= numD; i++) {
+  if (i == 1) {
+    numFac = i;
+    strFac = i;
+  } else {
+    numFac = numFac *= i;
+    strFac = strFac + ' x ' + i;
+  }
+}
+
+console.log(numD + '! = ' + strFac + ' = ' + numFac);
+console.log('------------------------------');
+
+// Write a code to print the first N fibonacci numbers
+
+let numE = 15;
+let numFibTmp, numFibA, numFibB;
+
+for (let i = 1; i <= numE; i++) {
+  if (i == 1) {
+    numFibTmp = 0;
+    numFibA = 1;
+  } else {
+    numFibTmp = numFibA;
+    numFibA = numFibB;
+  }
+  numFibB = numFibTmp + numFibA;
+}
+
+console.log('the first ' + numE + ' fibonacci numbers is ' + numFibA);
+console.log('------------------------------');
