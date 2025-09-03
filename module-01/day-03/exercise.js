@@ -30,7 +30,7 @@ console.log('------------------------------');
 
 // Write a code to convert centimeter to kilometer
 
-let numUnt = 100000.2;
+let numUnt = 100000;
 
 const nKilo = Math.round((numUnt / 100000) * 100) / 100;
 
