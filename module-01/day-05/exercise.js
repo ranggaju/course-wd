@@ -64,7 +64,7 @@ function sml2Num(...arr) {
 
 console.log(sml2Num(5, 3, 1, 7, 2, 6));
 
-// Mark 02
+// Mark 02 (Ignore duplicate)
 
 function sml2NumMk2(...arr) {
   const dup = [];
@@ -101,7 +101,7 @@ function add2Arr(arrA, arrB) {
 
 console.log(add2Arr([1, 2, 3], [3, 2, 1]));
 
-line2();
+line1();
 
 h2('Second Page');
 
