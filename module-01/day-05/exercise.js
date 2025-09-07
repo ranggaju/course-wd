@@ -5,9 +5,9 @@ const padding = (text = '') => ' '.repeat(Math.floor((linerLen - text.length) / 
 const hd = (text, level = 1) => {
   const header = `- ${text} -`;
   const pad = padding(header);
-  const border = level == 1 ? '=' : '-';
-  const top = level == 1 ? `${liner(border)}\n\n` : '';
-  const bot = level == 1 ? `\n\n${liner(border)}` : level == 2 ? `\n${liner(border)}` : '';
+  const border = level === 1 ? '=' : '-';
+  const top = level === 1 ? `${liner(border)}\n\n` : '';
+  const bot = level === 1 ? `\n\n${liner(border)}` : level == 2 ? `\n${liner(border)}` : '';
 
   console.log(`${top}${pad}${header}${bot}`);
 };
@@ -157,7 +157,7 @@ hd('III 01', 3);
 const primitiveOnly = (...array) => {
   const res = [];
   for (let n of array) {
-    typeof n != 'object' && res.push(n);
+    typeof n !== 'object' && res.push(n);
   }
   return res;
 };
