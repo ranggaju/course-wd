@@ -191,24 +191,24 @@ hd('03', 3);
 
 // Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'
 
-const rockPaperScissor = (playerChoice = '') => {
-  playerChoice = playerChoice.toLowerCase();
+const rockPaperScissor = (player = '') => {
+  player = player.toLowerCase();
 
   const option = ['rock', 'paper', 'scissor'];
-  const computerChoice = option[Math.floor(Math.random() * option.length)];
+  const comp = option[Math.floor(Math.random() * option.length)];
 
-  if (!option.includes(playerChoice)) {
+  if (!option.includes(player)) {
     return `choose: ${option.slice(0, -1).join(', ')} or ${option.slice(-1)}`;
   }
 
-  let message = `you throw ${playerChoice}, computer throw ${computerChoice}, you `;
+  let message = `you throw ${player}, computer throw ${comp}, you `;
 
   message +=
-    playerChoice === computerChoice
+    player === comp
       ? 'draw'
-      : (playerChoice === option[0] && computerChoice === option[2]) ||
-        (playerChoice === option[1] && computerChoice === option[0]) ||
-        (playerChoice === option[2] && computerChoice === option[1])
+      : (player === option[0] && comp === option[2]) ||
+        (player === option[1] && comp === option[0]) ||
+        (player === option[2] && comp === option[1])
       ? 'win'
       : 'lose';
 
