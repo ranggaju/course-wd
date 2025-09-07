@@ -17,7 +17,7 @@ const bl = (char) => console.log(liner(char));
 hd('Exercise Day 05');
 hd('First Page', 2);
 
-hd('I - 01', 3);
+hd('I 01', 3);
 
 // Write a function to get the lowest, highest and average value in the array (with and without sort function)
 
@@ -32,7 +32,7 @@ const minMaxAvr = (...numbers) => {
 
 console.log(minMaxAvr(12, 5, 23, 18, 4, 45, 32));
 
-hd('I - 02', 3);
+hd('I 02', 3);
 
 // Write a function that takes an array of words and returns a string by concatenating the words in the array separated by commas and - the last word - by an 'and'
 
@@ -44,7 +44,7 @@ const concatArr = (...array) => {
 
 console.log(concatArr('apple', 'banana', 'cherry', 'date'));
 
-hd('I - 03', 3);
+hd('I 03', 3);
 
 // Write a function from a given array of numbers and return the second smallest number
 
@@ -52,7 +52,7 @@ const secondSmallest = (...array) => array.sort()[1];
 
 console.log(secondSmallest(5, 3, 1, 7, 2, 6));
 
-hd('I - 04', 3);
+hd('I 04', 3);
 
 // Write a function to calculate each element in the same position from two arrays of integer
 
@@ -60,7 +60,7 @@ const addArr = (arrayA = [], arrayB = []) => arrayA.map((num, i) => num + arrayB
 
 console.log(addArr([1, 2, 3], [3, 2, 1]));
 
-hd('I - 05', 3);
+hd('I 05', 3);
 
 // Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array
 
@@ -72,15 +72,15 @@ console.log(addElement(7, 1, 2, 3, 4));
 bl('=');
 hd('Second Page', 2);
 
-hd('II - 01', 3);
+hd('II 01', 3);
 
 // Write a function from a given array of mixed data types and return the sum of all the number
 
 const sumOfNumber = (...array) => {
   let add = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    typeof array[i] === 'number' && (add += array[i]);
+  for (let n of array) {
+    typeof n === 'number' && (add += n);
   }
 
   return add;
@@ -88,7 +88,7 @@ const sumOfNumber = (...array) => {
 
 console.log(sumOfNumber('3', 1, 'string', null, false, undefined, 2));
 
-hd('II - 02', 3);
+hd('II 02', 3);
 
 // Write a function to insert multiple given integer (not an array) to an array and have a maximum size input. The array can only have a maximum size from a given input
 
@@ -105,7 +105,7 @@ const maxSize = (number, ...array) => {
 
 console.log(maxSize(5, 5, 10, 24, 3, 6, 7, 8));
 
-hd('II - 03', 3);
+hd('II 03', 3);
 
 // Write a function that will combine 2 given array into one array
 
@@ -113,7 +113,7 @@ const combineArray = (arrayA, arrayB) => [...arrayA, ...arrayB];
 
 console.log(combineArray([1, 2, 3], [4, 5, 6]));
 
-hd('II - 04', 3);
+hd('II 04', 3);
 
 // Write a function to find duplicate values in an array
 
@@ -121,26 +121,26 @@ const findDup = (...array) => {
   const temp = [];
   const res = [];
 
-  for (let i of array) {
-    temp.includes(i) && !res.includes(i) && res.push(i);
-    !temp.includes(i) && temp.push(i);
+  for (let n of array) {
+    temp.includes(n) && !res.includes(n) && res.push(n);
+    !temp.includes(n) && temp.push(n);
   }
   return res;
 };
 
 console.log(findDup(1, 2, 2, 2, 3, 3, 4, 5, 5));
 
-hd('II - 05', 3);
+hd('II 05', 3);
 
 // Write a function to find the difference in 2 given array
 
 const findDiff = (arrayA, arrayB) => {
   const res = [];
-  for (let i of arrayA) {
-    !arrayB.includes(i) && !res.includes(i) && res.push(i);
+  for (let n of arrayA) {
+    !arrayB.includes(n) && !res.includes(n) && res.push(n);
   }
-  for (let i of arrayB) {
-    !arrayA.includes(i) && !res.includes(i) && res.push(i);
+  for (let n of arrayB) {
+    !arrayA.includes(n) && !res.includes(n) && res.push(n);
   }
   return res;
 };
@@ -150,7 +150,7 @@ console.log(findDiff([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
 bl('=');
 
 hd('Third Page', 2);
-hd('III - 01', 3);
+hd('III 01', 3);
 
 // Based on the array below write a function that will return primitive data types only
 
@@ -164,7 +164,7 @@ const primitiveOnly = (...array) => {
 
 console.log(primitiveOnly(1, [], undefined, {}, 'string', {}, []));
 
-hd('III - 02', 3);
+hd('III 02', 3);
 
 // Write a function from the below array of number that will return sum of duplicate values
 
@@ -173,13 +173,13 @@ const sumDup = (...array) => {
   const dup = [];
   let res = 0;
 
-  for (let i of array) {
-    temp.includes(i) && !dup.includes(i) && dup.push(i);
-    !temp.includes(i) && temp.push(i);
+  for (let n of array) {
+    temp.includes(n) && !dup.includes(n) && dup.push(n);
+    !temp.includes(n) && temp.push(n);
   }
 
-  for (let i of array) {
-    dup.includes(i) && (res += i);
+  for (let n of array) {
+    dup.includes(n) && (res += n);
   }
 
   return res;
@@ -187,7 +187,7 @@ const sumDup = (...array) => {
 
 console.log(sumDup(10, 20, 40, 10, 50, 30, 10, 60, 10));
 
-hd('III - 03', 3);
+hd('III 03', 3);
 
 // Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'
 
