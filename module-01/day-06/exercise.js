@@ -21,32 +21,32 @@ hd('01', 3);
 // Create a function to calculate array of student data
 
 class Student {
-  constructor(Name, Email, DateOfBirth, Score) {
-    this.name = Name;
-    this.email = Email;
-    this.age = this.countAge(DateOfBirth);
-    this.score = Score;
+  constructor(name, email, dateOfBirth, score) {
+    this.name = name;
+    this.email = email;
+    this.age = this.countAge(dateOfBirth);
+    this.score = score;
   }
 
-  countAge(DateOfBirth) {
-    const Age = Math.round(((new Date() - new Date(DateOfBirth)) / (365.25 * 24 * 60 * 60 * 1000)) * 100) / 100;
-    return Age;
+  countAge(date) {
+    const age = Math.round(((new Date() - new Date(date)) / (365.25 * 24 * 60 * 60 * 1000)) * 100) / 100;
+    return age;
   }
 }
 
-const studentA = new Student('Abe', 'abe@school.com', '2009-07-26', 80);
-const studentB = new Student('Bambo', 'bambo@school.com', '2009-10-17', 70);
-const studentC = new Student('Cici', 'cici@school.com', '2009-11-04', 90);
-const studentD = new Student('David', 'david@school.com', '2010-02-02', 100);
-
-const students = [studentA, studentB, studentC, studentD];
+const students = [
+  new Student('Abe', 'abe@school.com', '2009-07-26', 80),
+  new Student('Bambo', 'bambo@school.com', '2009-10-17', 70),
+  new Student('Cici', 'cici@school.com', '2009-11-04', 90),
+  new Student('David', 'david@school.com', '2010-02-02', 100),
+];
 
 const calculateSum = (students = []) => {
   const getStat = (arr = [], key) => {
-    const val = arr.map((s) => s[key]);
-    const max = val.reduce((a, b) => (a > b ? a : b));
-    const min = val.reduce((a, b) => (a < b ? a : b));
-    const average = val.reduce((a, b) => a + b, 0) / val.length;
+    const value = arr.map((s) => s[key]);
+    const max = value.reduce((a, b) => (a > b ? a : b));
+    const min = value.reduce((a, b) => (a < b ? a : b));
+    const average = value.reduce((a, b) => a + b, 0) / value.length;
 
     const highest = arr.filter((s) => s[key] === max).map((s) => `${s.name} (${s[key]})`);
     const lowest = arr.filter((s) => s[key] === min).map((s) => `${s.name} (${s[key]})`);
@@ -71,9 +71,9 @@ hd('02', 3);
 // Create a program to create transaction
 
 class Product {
-  constructor(Name, Price) {
-    this.name = Name;
-    this.price = Price;
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
   }
 }
 
@@ -90,10 +90,10 @@ class Transaction {
   }
 
   showTotal() {
-    console.log(`Total: ${this.total}`);
+    console.log(this.total);
   }
 
-  checkOut(cash) {
+  checkOut() {
     const transactionData = {
       items: this.cart.map((c) => ({
         name: c.product.name,
@@ -102,7 +102,6 @@ class Transaction {
         subtotal: c.product.price * c.qty,
       })),
       total: this.total,
-      change: cash - this.total,
     };
     this.cart = [];
     this.total = 0;
@@ -127,4 +126,4 @@ sell.addToCart(productC, 1);
 
 sell.showTotal();
 
-sell.checkOut(20000);
+sell.checkOut();
