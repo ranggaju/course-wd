@@ -135,13 +135,14 @@ class ShootingGame {
       console.log(`${this.player1.name} got: Health +${item1.health}, Power +${item1.power}`);
       this.player1.useItem(item1);
       this.player1.showStat();
-      console.log(`\n${this.player1.name} shoots!`);
+      console.log(`\n${this.player1.name} shoots! Power: ${this.player1.power}`);
+      const health2 = this.player2.health;
       this.player2.damage(this.player1.power);
       if (this.player2.health <= 0) {
         console.log(`${this.player2.name} died!`);
         break;
       } else {
-        console.log(`${this.player2.name} survived...`);
+        console.log(`${this.player2.name} survived... Health: ${health2} -> ${this.player2.health}`);
       }
 
       console.log(`\n${this.player2.name}'s turn`);
@@ -150,13 +151,14 @@ class ShootingGame {
       console.log(`${this.player2.name} got: Health +${item2.health}, Power +${item2.power}`);
       this.player2.useItem(item2);
       this.player2.showStat();
-      console.log(`\n${this.player2.name} shoots!`);
+      console.log(`\n${this.player2.name} shoots! Power: ${this.player2.power}`);
+      const health1 = this.player1.health;
       this.player1.damage(this.player2.power);
       if (this.player1.health <= 0) {
         console.log(`${this.player1.name} died!`);
         break;
       } else {
-        console.log(`${this.player1.name} survived...`);
+        console.log(`${this.player1.name} survived... Health: ${health1} -> ${this.player1.health}`);
       }
 
       round++;
@@ -166,9 +168,9 @@ class ShootingGame {
   }
 }
 
-const shooterA = new Player('Abe');
-const shooterB = new Player('Bambo');
+// const shooterA = new Player('Abe');
+// const shooterB = new Player('Bambo');
 
-const game = new ShootingGame(shooterA, shooterB);
+// const game = new ShootingGame(shooterA, shooterB);
 
-game.start();
+new ShootingGame(new Player('Abe'), new Player('Bambo')).start();
