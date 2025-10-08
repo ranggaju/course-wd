@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LoginButton from "@/components/navbar/LoginButton";
 
 const NavBar = () => {
   return (
@@ -6,10 +7,10 @@ const NavBar = () => {
       <div className="flex font-bold text-2xl">
         <span className="text-orange-500">My</span>Blog
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-6 items-center">
         <Link href={"/"}>Home</Link>
         <Link href={"/articles"}>Articles</Link>
-        <Link href={"/login"}>Log In</Link>
+        <LoginButton />
       </div>
     </div>
   );
