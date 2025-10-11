@@ -5,16 +5,17 @@ import {
   SiTailwindcss,
   SiBackendless,
 } from "react-icons/si";
+import { ISkill } from "@/lib/interface";
 
-const skills = [
-  { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "TypeScript", icon: <SiTypescript /> },
-  { name: "HTML5", icon: <FaHtml5 /> },
-  { name: "CSS3", icon: <FaCss3 /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-  { name: "Backendless", icon: <SiBackendless /> },
+const skills: ISkill[] = [
+  { name: "JavaScript", icon: SiJavascript },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "HTML5", icon: FaHtml5 },
+  { name: "CSS3", icon: FaCss3 },
+  { name: "React", icon: FaReact },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Backendless", icon: SiBackendless },
 ];
 
 const Skills = () => {
@@ -29,7 +30,7 @@ const Skills = () => {
             key={skill.name}
             className="flex flex-col items-center hover:text-lime-500 transition"
           >
-            {skill.icon}
+            <skill.icon />
             <span className="mt-2 text-lg font-mono font-medium">
               {skill.name}
             </span>

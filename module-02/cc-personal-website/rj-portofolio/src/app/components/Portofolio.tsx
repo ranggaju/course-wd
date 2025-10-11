@@ -1,6 +1,7 @@
+import { IProject } from "@/lib/interface";
 import Image from "next/image";
 
-const projects = [
+const projects: IProject[] = [
   {
     title: "E-Commerce Platform for XYZ Retail",
     technologies: ["React", "Node.js", "MongoDB", "AWS"],
