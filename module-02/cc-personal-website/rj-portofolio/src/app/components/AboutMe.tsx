@@ -4,15 +4,15 @@ const AboutMe = () => {
       <div className="max-w-4xl">
         {/* title */}
         <h2 className="text-4xl font-semibold">
-          About Me<span className="text-orange-500">.</span>
+          About Me<span className="text-lime-500">.</span>
         </h2>
 
         {/* bio */}
         <p className="text-lg mt-4">
           Hi! I&apos;m{" "}
-          <span className="font-semibold text-orange-500">Rangga Julio</span> a
+          <span className="font-semibold text-lime-500">Rangga Julio</span> a
           passionate{" "}
-          <span className="font-semibold text-orange-500">
+          <span className="font-semibold text-lime-500">
             Front-End Developer
           </span>{" "}
           with a knack for creating engaging and user-friendly web applications.
@@ -27,7 +27,7 @@ const AboutMe = () => {
         {/* core skills */}
         <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-4">
-            Core Skills<span className="text-orange-500">.</span>
+            Core Skills<span className="text-lime-500">.</span>
           </h3>
           <ul className="flex flex-wrap gap-3">
             {[
@@ -52,11 +52,11 @@ const AboutMe = () => {
         {/* key values */}
         <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-4">
-            Key Values<span className="text-orange-500">.</span>
+            Key Values<span className="text-lime-500">.</span>
           </h3>
           <p className="text-lg">
             I believe in{" "}
-            <span className="text-orange-500 font-semibold">
+            <span className="text-lime-500 font-semibold">
               continuous learning, collaboration, and delivering high-quality
               work
             </span>

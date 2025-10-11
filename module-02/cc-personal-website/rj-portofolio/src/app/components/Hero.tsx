@@ -10,7 +10,7 @@ const Hero = () => {
           </span>
           <h1 className="text-[48px] xl:text-[80px] leading-[1.1] my-8">
             Hello! I&apos;m <br />
-            <span className="text-orange-500">Rangga Julio</span>
+            <span className="text-lime-500">Rangga Julio</span>
           </h1>
           <p className="text-[20px] xl:text-[24px] leading-[1.1] max-w-[500px]">
             Frontend developer focused on creating fast, elegant, and
