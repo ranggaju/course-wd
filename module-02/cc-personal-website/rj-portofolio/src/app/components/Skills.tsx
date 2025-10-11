@@ -21,10 +21,13 @@ const skills: ISkill[] = [
 const Skills = () => {
   return (
     <div id="skills" className="container mx-auto pt-24">
+      {/* title */}
       <h2 className="text-4xl font-semibold">
         Skills<span className="text-lime-500">.</span>
       </h2>
-      <ul className="grid grid-cols-3 gap-12 text-6xl mt-4">
+
+      {/* skills */}
+      <ul className="grid grid-cols-3 gap-12 text-6xl mt-8">
         {skills.map((skill) => (
           <li
             key={skill.name}

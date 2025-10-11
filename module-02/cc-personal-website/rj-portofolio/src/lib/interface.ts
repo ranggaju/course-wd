@@ -22,3 +22,10 @@ export interface IExperience {
   period: string;
   description: string;
 }
+
+export interface ITestimony {
+  name: string;
+  role: string;
+  message: string;
+  image: string;
+}

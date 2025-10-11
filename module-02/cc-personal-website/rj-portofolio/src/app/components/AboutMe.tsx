@@ -8,7 +8,7 @@ const AboutMe = () => {
         </h2>
 
         {/* bio */}
-        <p className="text-lg mt-4">
+        <p className="text-lg mt-8">
           Hi! I&apos;m{" "}
           <span className="font-semibold text-lime-500">Rangga Julio</span> a
           passionate{" "}

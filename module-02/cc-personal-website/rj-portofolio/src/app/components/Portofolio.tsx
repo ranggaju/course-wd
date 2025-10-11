@@ -41,7 +41,7 @@ const Portofolio = () => {
       </h2>
 
       {/* projects */}
-      <div className="grid md:grid-cols-2 gap-10 mt-4">
+      <div className="grid md:grid-cols-2 gap-10 mt-8">
         {projects.map((project, index) => (
           <div key={index}>
             <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden">

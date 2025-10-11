@@ -33,16 +33,16 @@ const Experience = () => {
       </h2>
 
       {/* experiences */}
-      <div className="mt-4 space-y-4">
+      <div className="mt-8 space-y-8">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="border-l-4 border-lime-500 pl-6 bg-white shadow-sm rounded-lg p-6 hover:shadow-md transition"
+            className="border-l-2 border-r-2 border-lime-500 p-6 rounded-2xl"
           >
-            <h3 className="text-xl font-semibold text-gray-800">{exp.role}</h3>
-            <p className="text-blue-600 font-medium">{exp.company}</p>
-            <p className="text-sm text-gray-500 mb-3">{exp.period}</p>
-            <p className="text-gray-600 leading-relaxed">{exp.description}</p>
+            <h3 className="text-xl font-semibold text-lime-500">{exp.role}</h3>
+            <p className="font-medium">{exp.company}</p>
+            <p className="text-sm mb-3">{exp.period}</p>
+            <p className="leading-relaxed">{exp.description}</p>
           </div>
         ))}
       </div>
