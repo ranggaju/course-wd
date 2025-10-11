@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const links = [
-  { name: "About", href: "#About" },
+  { name: "About me", href: "#About" },
   { name: "Portofolio", href: "#Portofolio" },
   { name: "Contact", href: "#Contact" },
 ];
@@ -15,12 +15,12 @@ const Navbar = () => {
             rangga<span className="text-orange-500">.</span>
           </h1>
         </Link>
-        <div className="flex gap-8 text-lg">
+        <div className="flex gap-8 text-lg items-center-safe">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className="hover:text-orange-500"
+              className="hover:text-orange-500 hover:border-orange-500 hover:border-b-2"
             >
               {link.name}
             </Link>
