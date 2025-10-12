@@ -9,7 +9,7 @@ const Navbar = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/products" },
     { name: "Teams", href: "/teams" },
     { name: "Blog", href: "/blog" },
   ];
