@@ -40,7 +40,7 @@ export default function Home() {
       {/* hero */}
       <section className="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="hero-bg.svg"
+          src="/hero-bg.jpg"
           alt="hero background"
           fill
           className="object-cover object-center brightness-50"
@@ -50,7 +50,7 @@ export default function Home() {
           <h1 className="text-5xl font-bold drop-shadow-md mb-4">
             Building the Future with Innovation
           </h1>
-          <p className="text-lg text-gray-200 mb-8">
+          <p className="text-lg mb-8">
             We deliver high-quality solutions that help your business grow.
           </p>
           <Link
