@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RJ | Company Profile",
+  title: "RJCorp. | Company Profile",
   description: "Company profile website built with Next App",
 };
 
