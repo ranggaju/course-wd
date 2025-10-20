@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1760931797786",
+    "title": "Salary",
+    "nominal": 8000000,
+    "type": "income",
+    "category": "salary",
+    "date": "2025-10-01"
+  },
+  {
+    "id": "1760931882636",
+    "title": "Eating Out",
+    "nominal": 250000,
+    "type": "expense",
+    "category": "food",
+    "date": "2025-10-20"
+  },
+  {
+    "id": "1760931933507",
+    "title": "Lunch",
+    "nominal": 50000,
+    "type": "expense",
+    "category": "food",
+    "date": "2025-10-20"
+  }
+]
