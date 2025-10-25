@@ -1,0 +1,44 @@
+node-api
+npm init --y
+npm i -D typescript @types/node
+npx tsc --init
+
+express-api
+npm init --y
+npm i express cors dotenv
+npm i -D typescript nodemon ts-node @types/node @types/express @types/cors
+npx tsc --init
+
+tsconfig.json template (replace all):
+
+{
+  "compilerOptions": {
+    "target": "es2017", // Or a newer target like "es2020" for modern Node.js versions
+    "module": "commonjs",
+    "outDir": "./dist", // Output directory for compiled JavaScript files
+    "rootDir": "./src", // Root directory of your TypeScript source files
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"], // Include all .ts files in the src directory
+  "exclude": ["node_modules", "**/*.spec.ts"] // Exclude node_modules and test files
+}
+
+./src/main.ts template:
+
+import express, { Request, Response } from "express";
+import cors from "cors";
+
+const PORT = 8080;
+
+const app = express();
+app.use(express.json())
+app.use(cors());
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+netstate -ano : untuk mengetahui port mana saja yg sedang di gunakan di windows
