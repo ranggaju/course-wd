@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "slug": "cara-merawat-bayi-baru-lahir",
+      "title": "Cara Merawat Bayi Baru Lahir dengan Benar",
+      "desc": "Panduan dasar untuk orang tua baru dalam merawat bayi sejak hari pertama.",
+      "content": "Merawat bayi baru lahir memerlukan kesabaran dan perhatian ekstra. Mulai dari menjaga kebersihan tali pusar, memberi ASI secara teratur, hingga memastikan bayi tidur dengan posisi yang aman. Hindari penggunaan bedak dan pastikan lingkungan bayi selalu bersih serta nyaman."
+    },
+    {
+      "slug": "tips-memilih-popok-bayi",
+      "title": "5 Tips Memilih Popok Bayi yang Tepat",
+      "desc": "Popok yang baik akan membuat bayi nyaman dan terhindar dari iritasi.",
+      "content": "Saat memilih popok, perhatikan bahan, daya serap, ukuran, dan kenyamanan. Popok berbahan lembut dan memiliki sirkulasi udara yang baik akan mengurangi risiko ruam. Jangan lupa mengganti popok setiap 3–4 jam agar kulit bayi tetap sehat."
+    },
+    {
+      "slug": "perlengkapan-wajib-bayi-baru",
+      "title": "Perlengkapan Wajib untuk Bayi Baru Lahir",
+      "desc": "Daftar perlengkapan penting yang harus disiapkan sebelum bayi lahir.",
+      "content": "Sebelum kelahiran, pastikan kamu sudah menyiapkan pakaian bayi, selimut, perlengkapan mandi, popok, dan perlengkapan menyusui. Pilih bahan yang lembut dan aman bagi kulit bayi. Tidak perlu membeli terlalu banyak, fokus pada kebutuhan utama saja."
+    },
+    {
+      "slug": "cara-menidurkan-bayi",
+      "title": "Cara Efektif Menidurkan Bayi dengan Cepat",
+      "desc": "Bayi sering rewel saat tidur? Coba tips ini.",
+      "content": "Ciptakan rutinitas tidur yang konsisten seperti memandikan bayi, menyusui, lalu mematikan lampu agar bayi tahu waktu tidur telah tiba. Gunakan suara lembut atau musik tenang untuk membantu bayi merasa aman. Hindari mengguncang bayi terlalu keras."
+    },
+    {
+      "slug": "makanan-pendamping-asi",
+      "title": "Panduan Makanan Pendamping ASI (MPASI) untuk Bayi 6 Bulan",
+      "desc": "Langkah awal mengenalkan MPASI agar bayi tumbuh sehat dan aktif.",
+      "content": "Mulailah dengan makanan lembut seperti bubur beras, pisang, atau kentang yang dihaluskan. Berikan satu jenis makanan baru setiap 3 hari untuk memantau alergi. Pastikan alat makan bersih dan gunakan sendok kecil agar bayi nyaman."
+    }
+  ]
+}

@@ -5,8 +5,8 @@ npx tsc --init
 
 express-api
 npm init --y
-npm i express cors dotenv
-npm i -D typescript nodemon ts-node @types/node @types/express @types/cors
+npm i express cors pg dotenv
+npm i -D typescript nodemon ts-node @types/node @types/express @types/cors @types/pg
 npx tsc --init
 
 tsconfig.json template (replace all):
