@@ -1,11 +1,9 @@
-console.log(">>> utils/index.ts loaded");
-
 import fs from "fs";
 import path from "path";
 
 const targetPath = path.join(process.cwd(), "db", "article.json");
 
-export function readJson<T = any>(): T {
+export const readJson = <T = any>(): T => {
   try {
     const data = fs.readFileSync(targetPath, "utf-8");
     return JSON.parse(data) as T;
@@ -13,9 +11,9 @@ export function readJson<T = any>(): T {
     console.error(`Failed to read JSON file at ${targetPath}:`, error);
     throw error;
   }
-}
+};
 
-export function writeJson<T = any>(data: T): void {
+export const writeJson = <T = any>(data: T): void => {
   try {
     const jsonString = JSON.stringify(data, null, 2);
     fs.writeFileSync(targetPath, jsonString, "utf-8");
@@ -23,4 +21,4 @@ export function writeJson<T = any>(data: T): void {
     console.error(`Failed to write JSON file at ${targetPath}:`, error);
     throw error;
   }
-}
+};
