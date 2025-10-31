@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import router from "./routers";
+import errorMiddleware from "./middleware/error.middleware";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/api", router);
 
 // Error Middleware
+app.use(errorMiddleware);
 
 app.listen(8000, () => {
   console.log("Server is running on port 8000");

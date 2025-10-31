@@ -13,6 +13,7 @@ export const getArticleByIdController = async (
   next: NextFunction
 ) => {
   try {
+    const user = req.user;
     const { id } = req.params;
 
     const articleId = Number(id);

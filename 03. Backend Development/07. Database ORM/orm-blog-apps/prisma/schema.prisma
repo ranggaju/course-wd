@@ -19,3 +19,18 @@ model Article {
 
   @@map("articles")
 }
+
+model User {
+  id            Int       @id @default(autoincrement())
+  email         String    @unique
+  name          String?
+  password      String
+  role          Role      @default(USER)
+
+  @@map("users")
+}
+
+enum Role {
+  ADMIN
+  USER
+}

@@ -6,13 +6,29 @@ import {
   getArticleByIdController,
   updateArticleController,
 } from "../controllers/article.controller";
+import { authMiddleware, roleGuard } from "../middleware/auth.middleware";
 
 const articleRouter = Router();
 
-articleRouter.get("/", getAllArticleController);
-articleRouter.get("/:id", getArticleByIdController);
-articleRouter.post("/", createArticleController);
-articleRouter.patch("/:id", updateArticleController);
-articleRouter.delete("/:id", deleteArticleController);
+articleRouter.get("/", authMiddleware, getAllArticleController);
+articleRouter.get("/:id", authMiddleware, getArticleByIdController);
+articleRouter.post(
+  "/",
+  authMiddleware,
+  roleGuard(["ADMIN"]),
+  createArticleController
+);
+articleRouter.patch(
+  "/:id",
+  authMiddleware,
+  roleGuard(["ADMIN"]),
+  updateArticleController
+);
+articleRouter.delete(
+  "/:id",
+  authMiddleware,
+  roleGuard(["ADMIN"]),
+  deleteArticleController
+);
 
 export default articleRouter;

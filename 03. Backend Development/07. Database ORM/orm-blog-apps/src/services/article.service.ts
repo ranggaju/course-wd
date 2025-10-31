@@ -1,11 +1,14 @@
 import { Prisma } from "@prisma/client";
 import prisma from "../lib/prisma";
+import { createCustomError } from "../utils/customError";
 
 export const getArticleById = async (id: number) => {
   try {
     const article = await prisma.article.findUnique({
       where: { id },
     });
+
+    if (!article) throw createCustomError(404, "Article not found");
 
     return article;
   } catch (err) {
