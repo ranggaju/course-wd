@@ -1,0 +1,25 @@
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import path from "path";
+
+import router from "./routers";
+import errorMiddleware from "./middleware/error.middleware";
+
+const app = express();
+
+// Middleware
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use("/api", router);
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+
+// Error Middleware
+app.use(errorMiddleware);
+
+app.listen(8000, () => {
+  console.log("Server is running on port 8000");
+});
